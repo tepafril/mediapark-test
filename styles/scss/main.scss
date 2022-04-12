@@ -1,0 +1,8 @@
+@import "./color";
+@import "./grid";
+@import "./utilities";
+
+html, body, p, div, a, table, input, option, li, ul, ol, select, span{
+    font-family: Montserrat;
+    color: $darkColor;
+}
