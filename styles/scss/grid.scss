@@ -37,7 +37,7 @@ $size: (
         @for $i from 1 through 12 {
             .col-#{$width}-#{$i}{
                 flex: 0 0 auto;
-                width: percentage($i/12);
+                flex: percentage($i/12);
             }
         }
     }
