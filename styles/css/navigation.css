@@ -1,8 +1,24 @@
-nav ul {
-  list-style-type: none;
+.nav {
+  display: flex;
+  padding: 5px 10px;
 }
 
-nav ul li {
+.nav ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.nav ul li {
+  padding: 10px 10px;
   display: inline;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  font-size: 1.125rem;
+}
+
+.pull-right {
+  margin-left: auto;
 }
 /*# sourceMappingURL=navigation.css.map */

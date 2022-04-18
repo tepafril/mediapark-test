@@ -1,6 +1,19 @@
+body{
+    margin:0px;
+}
+
+
+.flex{
+    display: flex;
+}
+
+.flex .dynamic-width {
+    flex: 1 1 auto;
+    margin-top:20px;
+}
+
 .container{
     margin: 0px auto;
-    background-color: #f1f1f1;
 }
 
 .row{
@@ -32,12 +45,19 @@ $size: (
     1400px: "xxl"
 );
 
+.d-none{
+    display: none;
+}
+
 @each $minWidth, $width in $size {
     @media (min-width: $minWidth) {
+        .d-#{$width}-none{
+            display: none;
+        }
         @for $i from 1 through 12 {
             .col-#{$width}-#{$i}{
                 flex: 0 0 auto;
-                flex: percentage($i/12);
+                width: percentage($i/12);
             }
         }
     }

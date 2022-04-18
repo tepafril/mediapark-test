@@ -2,8 +2,100 @@
 @import "./grid";
 @import "./utilities";
 @import "./navigation";
+@import "./gallery";
 
 html, body, p, div, a, table, input, option, li, ul, ol, select, span{
     font-family: Montserrat;
-    color: $darkColor;
+    color: $mediumBlack;
+}
+
+.nav ul.logo-container li a{
+    font-family: Quicksand;
+    font-size: 1.5rem;
+    font-weight:700;
+    color:#23231E;
+}
+
+.nav ul#desk-nav li{
+    padding: 10px 15px;
+}
+
+#gallery{
+    background: rgb(232,241,255);
+    background: linear-gradient(193deg, rgba(232,241,255,1) 0%, rgba(250,252,255,1) 100%);
+    height: 840px;
+}
+
+.gallery-title{
+    font-family: Quicksand;
+    font-size: 3rem;
+    color:#23231E;
+}
+
+
+
+
+/**************/
+.filterable-button-group > *{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.button{
+    padding:20px 30px;
+    background-color: #30333C;
+    color: #fff;
+    text-decoration: none;
+}
+.button-primary{
+    background-color: #a7c0e8 !important;
+    color: #fff !important;
+}
+.button-round{
+    padding:20px 30px !important;
+    border-radius: 50px !important;
+}
+/**************/
+
+
+
+
+/*****************/
+.table tr td{
+    text-align: center;
+    padding: 25px 10px;
+}
+.table tbody tr td{
+    border-top:1px solid #f1f1f1;
+}
+/*********************/
+
+
+.thumbnail-container {
+    position: relative;
+    width: 100%;
+}
+  
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+  
+.overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0.75;
+    color: white;
+    font-size: 20px;
+    padding: 50px 0px;
+    text-align: center;
+}
+
+.thumbnail-container:hover .overlay {
+    opacity: 1;
 }

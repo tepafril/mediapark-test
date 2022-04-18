@@ -1,8 +1,22 @@
-nav{
+.nav{
+    display: flex;
+    padding: 5px 10px;
     ul{
         list-style-type: none;
         li{
+            padding: 10px 10px;
             display: inline;
+            a{
+                text-decoration: none;
+                font-size: 1.125rem;
+            }
         }
+        padding-inline-start: 0px;
     }
+}
+
+
+
+.pull-right{
+    margin-left: auto;
 }
