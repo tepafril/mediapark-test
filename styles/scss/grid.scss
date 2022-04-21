@@ -20,6 +20,22 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
+.x-center {
+    display: flex;
+    justify-content: center;
+}
+
+.y-center {
+    flex: 1;
+}
+
+.x-right {
+    justify-content: flex-end;
+}
+
+.y-bottom {
+    align-self: flex-end;
+}
 
 $screen: (
     576px: 540px,
@@ -45,20 +61,21 @@ $size: (
     1400px: "xxl"
 );
 
-.d-none{
-    display: none;
-}
-
 @each $minWidth, $width in $size {
     @media (min-width: $minWidth) {
-        .d-#{$width}-none{
-            display: none;
-        }
         @for $i from 1 through 12 {
             .col-#{$width}-#{$i}{
                 flex: 0 0 auto;
                 width: percentage($i/12);
             }
+        }
+    }
+}
+
+@each $minWidth, $width in $size {
+    @media (max-width: $minWidth) {
+        .d-#{$width}-none{
+            display: none !important;
         }
     }
 }

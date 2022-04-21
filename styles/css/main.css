@@ -20,6 +20,23 @@ body {
   flex-wrap: wrap;
 }
 
+.x-center {
+  display: flex;
+  justify-content: center;
+}
+
+.y-center {
+  flex: 1;
+}
+
+.x-right {
+  justify-content: flex-end;
+}
+
+.y-bottom {
+  align-self: flex-end;
+}
+
 @media (min-width: 576px) {
   .container {
     width: 540px;
@@ -50,14 +67,7 @@ body {
   }
 }
 
-.d-none {
-  display: none;
-}
-
 @media (min-width: 576px) {
-  .d-sm-none {
-    display: none;
-  }
   .col-sm-1 {
     flex: 0 0 auto;
     width: 8.33333%;
@@ -109,9 +119,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  .d-md-none {
-    display: none;
-  }
   .col-md-1 {
     flex: 0 0 auto;
     width: 8.33333%;
@@ -163,9 +170,6 @@ body {
 }
 
 @media (min-width: 992px) {
-  .d-lg-none {
-    display: none;
-  }
   .col-lg-1 {
     flex: 0 0 auto;
     width: 8.33333%;
@@ -217,9 +221,6 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .d-xl-none {
-    display: none;
-  }
   .col-xl-1 {
     flex: 0 0 auto;
     width: 8.33333%;
@@ -271,9 +272,6 @@ body {
 }
 
 @media (min-width: 1400px) {
-  .d-xxl-none {
-    display: none;
-  }
   .col-xxl-1 {
     flex: 0 0 auto;
     width: 8.33333%;
@@ -321,6 +319,36 @@ body {
   .col-xxl-12 {
     flex: 0 0 auto;
     width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .d-sm-none {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .d-md-none {
+    display: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .d-lg-none {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .d-xl-none {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .d-xxl-none {
+    display: none !important;
   }
 }
 
@@ -776,6 +804,26 @@ body {
   text-align: right !important;
 }
 
+.text-red {
+  color: #ff0000;
+}
+
+.v-none {
+  visibility: hidden;
+}
+
+.d-none {
+  display: none;
+}
+
+.pull-right {
+  margin-left: auto;
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.05);
+}
+
 .nav {
   display: flex;
   padding: 5px 10px;
@@ -796,8 +844,59 @@ body {
   font-size: 1.125rem;
 }
 
-.pull-right {
-  margin-left: auto;
+.mobile-container {
+  width: 100vw;
+  margin: auto;
+  background-color: #555;
+  color: white;
+  border-radius: 10px;
+}
+
+.mobile-container .topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.mobile-container .topnav #myLinks {
+  display: none;
+}
+
+.mobile-container .topnav a {
+  color: #70737c;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.mobile-container .topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.mobile-container .active {
+  background-color: #fff;
+  color: #70737c;
+}
+
+#gallery-container {
+  background: #e8f1ff;
+  background: linear-gradient(193deg, #e8f1ff 0%, #fafcff 100%);
+  height: 840px;
+}
+
+#gallery-container .swiper-button-next::after, #gallery-container .swiper-button-prev::after {
+  content: "";
+}
+
+.gallery-title {
+  font-family: Quicksand;
+  font-size: 3em;
+  color: #23231E;
 }
 
 .swiper {
@@ -829,8 +928,7 @@ body {
 }
 
 .swiper {
-  width: 95%;
-  height: 650px;
+  height: 670px;
   margin: 20px auto;
   margin-top: 140px;
   padding-bottom: 45px;
@@ -845,9 +943,32 @@ body {
   box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.05);
 }
 
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: 3em;
+  left: auto;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: 3em;
+  right: auto;
+}
+
+body {
+  background-color: #fff;
+}
+
 html, body, p, div, a, table, input, option, li, ul, ol, select, span {
   font-family: Montserrat;
   color: #30333C;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Quicksand;
+  color: #30333C;
+}
+
+header {
+  background-color: #fff;
 }
 
 .nav ul.logo-container li a {
@@ -861,16 +982,9 @@ html, body, p, div, a, table, input, option, li, ul, ol, select, span {
   padding: 10px 15px;
 }
 
-#gallery {
-  background: #e8f1ff;
-  background: linear-gradient(193deg, #e8f1ff 0%, #fafcff 100%);
-  height: 840px;
-}
-
-.gallery-title {
-  font-family: Quicksand;
-  font-size: 3rem;
-  color: #23231E;
+#datatables-container {
+  padding: 220px 0px 0px 0px;
+  background-color: #fff;
 }
 
 /**************/
@@ -880,20 +994,84 @@ html, body, p, div, a, table, input, option, li, ul, ol, select, span {
 }
 
 .button {
-  padding: 20px 30px;
+  font-size: 1.25em;
+  padding: 20px 40px;
   background-color: #30333C;
+  border: 1px solid #30333C;
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .button-primary {
   background-color: #a7c0e8 !important;
+  border: 1px solid #a7c0e8;
   color: #fff !important;
 }
 
 .button-round {
-  padding: 20px 30px !important;
   border-radius: 50px !important;
+}
+
+.button-circle {
+  padding: 15px;
+  border-radius: 100%;
+}
+
+.dropdown-button-group {
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+  margin-top: 20px;
+  display: none;
+}
+
+.dropdown-content ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-align: left;
+}
+
+.dropdown-content ul li {
+  border-top: 1px solid #f1f1f1;
+  padding: 20px;
+}
+
+.dropdown-button-group .active .dropdown-content {
+  display: block;
+}
+
+.dropdown-button-group .active .button-round {
+  border-radius: 30px 30px 0px 0px !important;
+}
+
+.dropdown-button-group .active .dropdown-content {
+  overflow: hidden;
+  border-radius: 0px 0px 30px 30px !important;
+}
+
+.dropdown-button-group .fa-chevron-up {
+  display: none;
+}
+
+.dropdown-button-group .active .fa-chevron-up {
+  display: inline-block;
+}
+
+.dropdown-button-group .active .fa-chevron-down {
+  display: none;
 }
 
 /**************/
@@ -924,7 +1102,6 @@ html, body, p, div, a, table, input, option, li, ul, ol, select, span {
   bottom: 0;
   background: black;
   background: linear-gradient(0deg, black 0%, rgba(255, 255, 255, 0) 100%);
-  color: #f1f1f1;
   width: 100%;
   transition: .5s ease;
   opacity: 0.75;
@@ -935,6 +1112,195 @@ html, body, p, div, a, table, input, option, li, ul, ol, select, span {
 }
 
 .thumbnail-container:hover .overlay {
+  opacity: 1;
+}
+
+/**********************/
+.dark-footer {
+  background-color: #30333C;
+}
+
+.dark-footer ul.footer-nav {
+  padding-inline-start: 0px;
+}
+
+.dark-footer ul.footer-nav li {
+  color: #fff;
+  list-style-type: none;
+  padding: 8px 0px;
+  font-size: 1.25em;
+}
+
+.dark-footer i, .dark-footer a, .dark-footer p, .dark-footer div, .dark-footer h1, .dark-footer h2, .dark-footer h3, .dark-footer span {
+  color: #fff;
+}
+
+.dark-footer h2 {
+  font-size: 2em;
+}
+
+.dark-footer .social-media-container {
+  position: relative;
+  height: 100%;
+}
+
+.dark-footer .social-media-container .social-media-box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/**********************/
+/************ Contact Form **************/
+#contact-form-container {
+  background: linear-gradient(100deg, #E6F1FF 42.5%, #fff 42.5%);
+}
+
+#contact-form-container .title {
+  font-size: 4em;
+  color: #6F88B1;
+}
+
+#contact-form-container .logo-box {
+  justify-content: center;
+}
+
+#contact-form-container .logo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#contact-form-container .name {
+  width: 100%;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#contact-form-container .email {
+  width: 100%;
+  font-size: 1.225em;
+}
+
+#contact-form-container .phone {
+  width: 100%;
+  font-size: 1.225em;
+}
+
+#contact-form-container .flex-wrap {
+  display: flex;
+}
+
+#contact-form-container .flex-wrap .content {
+  align-self: center;
+}
+
+/************ Contact Form **************/
+/************** Form Control *************/
+.form-control {
+  width: 100%;
+}
+
+.form-control .form-input, .form-control .form-input:focus, .form-control .form-input:active {
+  width: 100%;
+  border-bottom-color: rgba(111, 136, 177, 0.27) !important;
+  border-width: 0px 0px 1px 0px !important;
+  font-size: 1.25em;
+}
+
+.form-control .form-input::placeholder {
+  color: #70737c;
+}
+
+.form-control label {
+  color: #70737c;
+  line-height: 2em;
+  font-size: 1.25em;
+}
+
+.form-control label a {
+  color: #70737c;
+}
+
+.form-control .styled-input-single {
+  position: relative;
+  padding: 20px 0 20px 60px;
+  text-align: left;
+}
+
+.form-control .styled-input-single label {
+  cursor: pointer;
+}
+
+.form-control .styled-input-single label:before, .form-control .styled-input-single label:after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  border-radius: 50%;
+}
+
+.form-control .styled-input-single label:before {
+  left: 0;
+  width: 30px;
+  height: 30px;
+  margin: -15px 0 0;
+  background: #f7f7f7;
+  border: solid 2px #6F88B1;
+}
+
+.form-control .styled-input-single label:after {
+  left: 5px;
+  width: 22px;
+  height: 22px;
+  margin: -9px 1px;
+  opacity: 0;
+  background: #6F88B1;
+  transform: translate3d(-40px, 0, 0) scale(0.5);
+  transition: opacity 0s ease-in-out, transform 0s ease-in-out;
+}
+
+.form-control .styled-input-single input[type="radio"],
+.form-control .styled-input-single input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  visibility: hidden;
+}
+
+.form-control .styled-input-single input[type="radio"]:checked + label:after,
+.form-control .styled-input-single input[type="checkbox"]:checked + label:after {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.form-control .styled-input--square label:before, .form-control .styled-input--square label:after {
+  border-radius: 0;
+}
+
+.form-control .styled-input--rounded label:before {
+  border-radius: 10px;
+}
+
+.form-control .styled-input--rounded label:after {
+  border-radius: 6px;
+}
+
+.form-control .styled-input--diamond .styled-input-single {
+  padding-left: 45px;
+}
+
+.form-control .styled-input--diamond label:before, .form-control .styled-input--diamond label:after {
+  border-radius: 0;
+}
+
+.form-control .styled-input--diamond label:before {
+  transform: rotate(45deg);
+}
+
+.form-control .styled-input--diamond input[type="radio"]:checked + label:after,
+.form-control .styled-input--diamond input[type="checkbox"]:checked + label:after {
+  transform: rotate(45deg);
   opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */

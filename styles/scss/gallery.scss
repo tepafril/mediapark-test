@@ -1,3 +1,19 @@
+#gallery-container{
+    background: rgb(232,241,255);
+    background: linear-gradient(193deg, rgba(232,241,255,1) 0%, rgba(250,252,255,1) 100%);
+    height: 840px;
+
+    .swiper-button-next::after, .swiper-button-prev::after {
+        content: "";
+    }
+}
+
+.gallery-title{
+    font-family: Quicksand;
+    font-size: 3em;
+    color:#23231E;
+}
+
 
 .swiper {
     width: 100%;
@@ -28,8 +44,7 @@
 }
 
 .swiper {
-    width: 95%;
-    height: 650px;
+    height: 670px;
     margin: 20px auto;
     margin-top: 140px;
     padding-bottom: 45px;
@@ -44,4 +59,14 @@
     -webkit-box-shadow: 0px 10px 20px 5px rgba(0,0,0,0.05);
     -moz-box-shadow: 0px 10px 20px 5px rgba(0,0,0,0.05);
     box-shadow: 0px 10px 20px 5px rgba(0,0,0,0.05);
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 3em;
+    left: auto;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 3em;
+    right: auto;
 }

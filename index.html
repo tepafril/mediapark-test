@@ -12,6 +12,7 @@
 
         <script src="./vendors/jquery/jquery-3.1.1.min.js"></script>
         <script src="./vendors/swiperjs/js/swiper-bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/9e842521c0.js" crossorigin="anonymous"></script>
         <script src="./js/app.js"></script>
         <title>MediaPark - Test</title> 
 
@@ -22,14 +23,14 @@
    </style>
 
 
-   <body style="background-color: #f1f1f1;">
+   <body>
 
         <!-- Start Header-->
-        <header style="background-color: #fff;">
+        <header>
             <div class="container">
                 <div class="row">
                     <div  class="col-sm-12">
-                        <nav class="nav">
+                        <nav class="nav d-sm-none">
 
                             <ul class="nav-bar logo-container">
                                 <li><a href="#">NTPROJECT</a></li>
@@ -46,13 +47,35 @@
                     </div>
                 </div>
             </div>
+
+
+
+            <!-- Simulate a smartphone / tablet -->
+            <nav class="mobile-container">
+              <!-- Top Navigation Menu -->
+              <div class="topnav">
+                <a href="#home" class="active">NTPROJECT</a>
+                <ul id="myLinks">
+                  <li><a href="#news">Pradžia</a></li>
+                  <li><a href="#contact">Pasiūlymai</a></li>
+                  <li><a href="#about">Naujienos</a></li>
+                  <li><a href="#about">Kontaktai</a></li>
+                </ul>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars fa-lg"></i>
+                </a>
+              </div>
+            </div>
+
+
+
         </header>
         <!-- End Header-->
 
 
 
         <!-- Start Gallery -->
-        <div id="gallery">
+        <div id="gallery-container">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
@@ -76,6 +99,7 @@
                   <div class="swiper-slide-text-container">
                     <h2 class="m-0 pt-8 pl-8 pr-8 pb-6 text-left">Lorem ipsum dolor sit amet</h2>
                     <p class="m-0 pl-8 pr-2 text-left">Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
+                    <div class="text-right mr-10"><a class=""><i class="fa-solid fa-arrow-right-long fa-2x"></i></a></div>
                   </div>
                 </div>
 
@@ -86,6 +110,7 @@
                   <div class="swiper-slide-text-container">
                     <h2 class="m-0 pt-8 pl-8 pr-8 pb-6 text-left">Lorem ipsum dolor sit amet</h2>
                     <p class="m-0 pl-8 pr-2 text-left">Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
+                    <div class="text-right mr-10"><a class=""><i class="fa-solid fa-arrow-right-long fa-2x"></i></a></div>
                   </div>
                 </div>
 
@@ -96,6 +121,7 @@
                   <div class="swiper-slide-text-container">
                     <h2 class="m-0 pt-8 pl-8 pr-8 pb-6 text-left">Lorem ipsum dolor sit amet</h2>
                     <p class="m-0 pl-8 pr-2 text-left">Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
+                    <div class="text-right mr-10"><a class=""><i class="fa-solid fa-arrow-right-long fa-2x"></i></a></div>
                   </div>
                 </div>
 
@@ -106,6 +132,7 @@
                   <div class="swiper-slide-text-container">
                     <h2 class="m-0 pt-8 pl-8 pr-8 pb-6 text-left">Lorem ipsum dolor sit amet</h2>
                     <p class="m-0 pl-8 pr-2 text-left">Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
+                    <div class="text-right mr-10"><a class=""><i class="fa-solid fa-arrow-right-long fa-2x"></i></a></div>
                   </div>
                 </div>
 
@@ -116,14 +143,21 @@
                   <div class="swiper-slide-text-container">
                     <h2 class="m-0 pt-8 pl-8 pr-8 pb-6 text-left">Lorem ipsum dolor sit amet</h2>
                     <p class="m-0 pl-8 pr-2 text-left">Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
+                    <div class="text-right mr-10"><a class=""><i class="fa-solid fa-arrow-right-long fa-2x"></i></a></div>
                   </div>
                 </div>
-
-                
               </div>
 
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
+              <div style="background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);width: 240px;position: absolute;right: 0px;top: 0px;height: 100%;z-index: 10;">
+                &nbsp;
+              </div>
+
+              <div class="swiper-button-next">
+                <a class="button button-circle button-primary"><i class="fa-solid fa-arrow-right-long fa-2x"></i></a>
+              </div>
+              <div class="swiper-button-prev">
+                <a class="button button-circle button-primary"><i class="fa-solid fa-arrow-left-long fa-2x"></i></a>
+              </div>
             </div>
             
         </div>
@@ -131,26 +165,66 @@
 
 
         <!-- Start tables -->
-        <div id="datatables" style="padding:180px 0px 0px 0px; background-color: #f1f1f1;">
+        <div id="datatables-container">
           <div class="container">
               <div class="row">
                   <div class="col-sm-12">
                     <div style="padding-top: 50px; background-color: #fff; border-radius: 20px; min-height: 300px; -webkit-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);-moz-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);">
                       
-                      <div class="row mt-5 mb-10">
-                        <div class="col-sm-12 col-md-6 col-xl-3 text-center">
-                          <a href="#" class="button button-primary button-round">Plotas</a>
+                      <div class="dropdown-button-group">
+
+
+                        <div class="ml-4 mr-4 dropdown">
+                          <a href="javascript:void(0)" class="button button-primary button-round">Plotas <i class="fa-solid fa-chevron-down fa-lg pl-6"></i><i class="fa-solid fa-chevron-up fa-lg pl-6"></i></a>
+                          <div class="dropdown-content box-shadow">
+                            <ul>
+                              <li>asdfasdf</li>
+                              <li>asdfasdf</li>
+                              <li>asdfasdf</li>
+                              <li>asdfasdf</li>
+                            </ul>
+                          </div>
                         </div>
-                        <div class="col-sm-12 col-md-6 col-xl-3 text-center">
-                          <a href="#" class="button button-primary button-round">Kambarių skaičius</a>
+                        
+                        <div class="ml-4 mr-4 dropdown">
+                          <a href="javascript:void(0)" class="button button-primary button-round">Kambarių skaičius <i class="fa-solid fa-chevron-down fa-lg pl-6"></i><i class="fa-solid fa-chevron-up fa-lg pl-6"></i></a>
+                          <div class="dropdown-content box-shadow">
+                            <ul>
+                              <li>asdfasdf</li>
+                              <li>asdfasdf</li>
+                              <li>asdfasdf</li>
+                              <li>asdfasdf</li>
+                            </ul>
+                          </div>
                         </div>
-                        <div class="col-sm-12 col-md-6 col-xl-3 text-center">
-                          <a href="#" class="button button-primary button-round">Langų orientacija</a>
+                        
+                        <div class="ml-4 mr-4 dropdown">
+                          <a href="javascript:void(0)" class="button button-primary button-round">Langų orientacija <i class="fa-solid fa-chevron-down fa-lg pl-6"></i><i class="fa-solid fa-chevron-up fa-lg pl-6"></i></a>
+                          <div class="dropdown-content box-shadow">
+                            <ul>
+                              <li>asdfasdf</li>
+                              <li>asdfasdf</li>
+                              <li>asdfasdf</li>
+                              <li>asdfasdf</li>
+                            </ul>
+                          </div>
                         </div>
-                        <div class="col-sm-12 col-md-6 col-xl-3 text-center">
-                          <a href="#" class="button button-primary button-round">Baigtumas</a>
+                        
+                        <div class="ml-4 mr-4 dropdown">
+                          <a href="javascript:void(0)" class="button button-primary button-round">Baigtumas <i class="fa-solid fa-chevron-down fa-lg pl-6"></i><i class="fa-solid fa-chevron-up fa-lg pl-6"></i></a>
+                          <div class="dropdown-content box-shadow">
+                            <ul>
+                              <li>asdfasdf</li>
+                              <li>asdfasdf</li>
+                              <li>asdfasdf</li>
+                              <li>asdfasdf</li>
+                            </ul>
+                          </div>
                         </div>
+
+                        
                       </div>
+
 
                       <table class="pt-10 mt-10 table" style="width: 100%; border: 0px solid #fff;">
                         <thead>
@@ -248,7 +322,7 @@
         
 
         <!-- Start Blog -->
-        <div id="blog" style="background-color: #f1f1f1;">
+        <div class="mt-5">
           <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -258,110 +332,205 @@
           </div>
         </div>
 
-        <div id="blog" style="background-color: #fff;" class="pt-10 pb-10 mb-10">
+        <div id="blog-container" class="pt-10 pb-10 mb-10 box-shadow">
           <div class="container">
-            <div class="row">
+            <div class="row" style="margin-left:-1rem; margin-right:-1rem;">
+
               <div class="col-sm-4">
-                <div class="thumbnail-container">
-                  <img src="img/img_avatar.png" alt="Avatar" class="image">
-                  <div class="overlay">Lorem ipsum dolor sit amet</div>
+                <div class="p-4">
+                  <div class="thumbnail-container">
+                    <img src="img/img_avatar.png" alt="Avatar" class="image">
+                    <div class="overlay">Lorem ipsum dolor sit amet</div>
+                  </div>
                 </div>
               </div>
+              
               <div class="col-sm-4">
-                <div class="thumbnail-container">
-                  <img src="img/img_avatar.png" alt="Avatar" class="image">
-                  <div class="overlay">Lorem ipsum dolor sit amet</div>
+                <div class="p-4">
+                  <div class="thumbnail-container">
+                    <img src="img/img_avatar.png" alt="Avatar" class="image">
+                    <div class="overlay">Lorem ipsum dolor sit amet</div>
+                  </div>
                 </div>
               </div>
+
               <div class="col-sm-4">
-                <div class="thumbnail-container">
-                  <img src="img/img_avatar.png" alt="Avatar" class="image">
-                  <div class="overlay">Lorem ipsum dolor sit amet</div>
+                <div class="p-4">
+                  <div class="thumbnail-container">
+                    <img src="img/img_avatar.png" alt="Avatar" class="image">
+                    <div class="overlay">Lorem ipsum dolor sit amet</div>
+                  </div>
                 </div>
               </div>
+              
               <div class="col-sm-4">
-                <div class="thumbnail-container">
-                  <img src="img/img_avatar.png" alt="Avatar" class="image">
-                  <div class="overlay">Lorem ipsum dolor sit amet</div>
+                <div class="p-4">
+                  <div class="thumbnail-container">
+                    <img src="img/img_avatar.png" alt="Avatar" class="image">
+                    <div class="overlay">Lorem ipsum dolor sit amet</div>
+                  </div>
                 </div>
               </div>
+              
               <div class="col-sm-4">
-                <div class="thumbnail-container">
-                  <img src="img/img_avatar.png" alt="Avatar" class="image">
-                  <div class="overlay">Lorem ipsum dolor sit amet</div>
+                <div class="p-4">
+                  <div class="thumbnail-container">
+                    <img src="img/img_avatar.png" alt="Avatar" class="image">
+                    <div class="overlay">Lorem ipsum dolor sit amet</div>
+                  </div>
                 </div>
               </div>
+              
               <div class="col-sm-4">
-                <div class="thumbnail-container">
-                  <img src="img/img_avatar.png" alt="Avatar" class="image">
-                  <div class="overlay">Lorem ipsum dolor sit amet</div>
+                <div class="p-4">
+                  <div class="thumbnail-container">
+                    <img src="img/img_avatar.png" alt="Avatar" class="image">
+                    <div class="overlay">Lorem ipsum dolor sit amet</div>
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
 
-          <div class="text-center mt-10 pt-10">
-            <a href="#" class="button button-round">Daugiau naujienų</a>
+
+          <div class="text-center mt-10 pt-10 pb-8">
+            <a href="#" class="button button-round">Daugiau naujienų <i class="fa-solid fa-arrow-right-long fa-lg pl-6"></i></a>
           </div>
         </div>
+        <!-- End Blog -->
 
 
-        <div id="contact-form" style="background: linear-gradient(100deg, #E6F1FF 45%, #fff 45%);" class="pt-10">
-          <div style="min-height: 480px;">
-            
+        <div class="p-2">&nbsp;</div>
+
+        <!-- Start Contact Form -->
+        <div id="contact-form-container" class="pt-10 pb-10 box-shadow">
+          <div class="container">
             <div class="row">
-              <div class="col-sm-6">
-                asdf
+              <div class="col-sm-6 pt-10">
+
+                <div class="flex-wrap mt-10 mb-10">
+                  <div class="logo-box">
+                    <div class="logo"><img src="img/p1.jpg"></div>
+                  </div>
+                  <div class="content ml-10">
+                    <div class="name pb-2">Agnė Valentinaitė</div>
+                    <div class="email pb-2">agne@ntprojects.com</div>
+                    <div class="phone pb-2">+370 62553454</div>
+                  </div>
+                </div>
+
+                <div class="flex-wrap mb-10">
+                  <div class="logo-box">
+                    <div class="logo"><img src="img/p2.jpg"></div>
+                  </div>
+                  <div class="content ml-10">
+                    <div class="name pb-2">Agnė Valentinaitė</div>
+                    <div class="email pb-2">agne@ntprojects.com</div>
+                    <div class="phone pb-2">+370 62553454</div>
+                  </div>
+                </div>
+
+                <div class="flex-wrap mb-10">
+                  <div class="logo-box">
+                    <div class="logo"><img src="img/p3.jpg"></div>
+                  </div>
+                  <div class="content ml-10">
+                    <div class="name pb-2">Agnė Valentinaitė</div>
+                    <div class="email pb-2">agne@ntprojects.com</div>
+                    <div class="phone pb-2">+370 62553454</div>
+                  </div>
+                </div>
               </div>
+
+
               <div class="col-sm-6">
-                <h1>Sužinok apie projektą daugiau</h1>
+                <h1 class="title mt-5">Sužinok apie projektą daugiau</h1>
                 <form class="form-control">
-                  <input class="" placeholder="Jūsų vardas" style="width: 100%;">
-                  <input class="" placeholder="El. Paštas" style="width: 100%;">
-                  <input class="" placeholder="Telefono numeris" style="width: 100%;">
-                  <input class="" placeholder="Žinutė" style="width: 100%;">
-                  <p>Lorem ipsum, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore minim ntprojects@info.com</p>
-                  <button>Siųsti</button>
+                  <input class="form-input mt-2 pt-2 mb-0 pb-2 pl-2" placeholder="Jūsų vardas">
+                  <p class="mb-4 mt-2 pl-2 v-none text-red">Privalomas laukas</p>
+                  <input class="form-input mt-2 pt-2 mb-0 pb-2 pl-2" placeholder="El. Paštas">
+                  <p class="mb-4 mt-2 pl-2 v-none text-red">Įvestas neteisingas el. paštas</p>
+                  <input class="form-input mt-2 pt-2 mb-0 pb-2 pl-2" placeholder="Telefono numeris">
+                  <p class="mb-4 mt-2 pl-2 v-none text-red">Privalomas laukas</p>
+                  <input class="form-input mt-2 pt-2 mb-0 pb-2 pl-2" placeholder="Žinutė">
+                  <p class="mb-4 mt-2 pl-2 v-none text-red">Privalomas laukas</p>
+
+                  <div class="styled-input-container styled-input--square">
+                    <div class="styled-input-single">
+                      <input type="checkbox" name="fieldset-2" id="radio2-example-one" />
+                      <label for="radio2-example-one">Lorem ipsum, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore minim <a href="mailto:ntprojects@info.com">ntprojects@info.com</a></label>
+                    </div>
+                  </div>
+
+                  <button class="button button-round">Siųsti <i class="fa-solid fa-arrow-right-long fa-lg pl-6"></i></button>
                 </form>
               </div>
             </div>
 
           </div>
         </div>
+        <!-- End Contact Form -->
 
-        <div id="footer" class="mt-10" style="background-color: #30333C; color: #fff;">
 
+
+        <!-- Start Footer -->
+        <footer class="mt-10 pt-10 pb-10 dark-footer">
 
           <div class="container">
 
             <div class="row">
               <div class="col-sm-3">
-                <h2 style="color: #fff;">Apie statytoją</h2>
-                <ul>
-                  <li style="color: #fff;">Lorem ipsum</li>
-                  <li style="color: #fff;">Dolor sit amet</li>
+                <h2 class="pt-0 pb-0">Apie statytoją</h2>
+                <ul class="footer-nav">
+                  <li>Lorem ipsum</li>
+                  <li>Dolor sit amet</li>
                 </ul>
               </div>
+              
               <div class="col-sm-3">
-                <h2 style="color: #fff;">Apie statytoją</h2>
-                <ul>
-                  <li style="color: #fff;">Consectetur adipiscing</li>
-                  <li style="color: #fff;">Sed do eiusmod</li>
+                <h2 class="pt-0 pb-0">Saugumas</h2>
+                <ul class="footer-nav">
+                  <li>Consectetur adipiscing</li>
+                  <li>Sed do eiusmod</li>
                 </ul>
               </div>
               
               <div class="col-sm-6">
-                <i style="color:#fff" class="fa fa-arrow-right fa-lg"></i>
-                <i style="color:#fff" class="fa fa-instagram fa-lg"></i>
+                <div class="social-media-container">
+                  <div class="social-media-box pb-5">
+                    <a href="#" class="p-5"><i class="fa fa-facebook fa-2x"></i></a>
+                    <a href="#" class="p-5"><i class="fa fa-instagram fa-2x"></i></a>
+                  </div>
+                </div>
               </div>
             </div>
 
-          </div>
-
-
-        </div>
-
+        </footer>
+        <!-- End Footer -->
         
+        <script>
+          function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+              x.style.display = "none";
+            } else {
+              x.style.display = "block";
+            }
+          }
 
+          $(document).ready(function(){
+            $('body').on('click', '.dropdown-button-group .dropdown', function(){
+              if($(this).hasClass('active')){
+                $(this).removeClass('active');
+              }
+              else{
+                $('.dropdown-button-group .dropdown').removeClass('active');
+                $(this).addClass('active');
+              }
+            });
+          });
+
+          </script>
    </body> 
 </html> 
