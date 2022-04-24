@@ -23,10 +23,10 @@
 define( 'DB_NAME', 'mediapark_db' );
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'medipark_usr' );
 
 /** Database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', '!i693bLc' );
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
