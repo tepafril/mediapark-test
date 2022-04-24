@@ -192,4 +192,11 @@ $(document).ready(function(){
         }, 500);
     });
 
+    $('input[name="your-subject"]').keyup(function(e){
+        if (/\D/g.test(this.value))
+        {
+            this.value = this.value.replace(/\D/g, '');
+        }
+    });
+
 });
