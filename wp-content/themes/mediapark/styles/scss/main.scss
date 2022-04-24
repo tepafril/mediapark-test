@@ -1,0 +1,377 @@
+@import "./color";
+@import "./grid";
+@import "./utilities";
+@import "./navigation";
+@import "./gallery";
+@import "./button";
+@import "./form";
+
+body{
+    background-color: $absoluteWhite;
+}
+
+html, body, p, div, a, table, input, option, li, ul, ol, select, span{
+    font-family: Montserrat;
+    color: $mediumBlack;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Quicksand;
+    color: $mediumBlack;
+}
+
+header{
+    background-color: $absoluteWhite;
+}
+
+.nav ul.logo-container li a{
+    font-family: Quicksand;
+    font-size: 1.5rem;
+    font-weight:700;
+    color:#23231E;
+}
+
+.nav ul#desk-nav li{
+    padding: 10px 15px;
+}
+
+#datatables-container{
+    overflow-x: auto;
+    padding:220px 0px 0px 0px;
+    background-color: #fff;
+    table{
+        border-collapse: collapse;
+    }
+    table tr.active{
+        background-color: #f6f8fe;
+    }
+}
+
+
+
+
+/*****************/
+.table-container{
+    width: 100%;
+}
+.table{
+    border: 0px solid #fff;
+    width: 100%;
+}
+.table tr td{
+    text-align: center;
+    padding: 25px 10px;
+}
+.table tr td {
+    white-space:nowrap;
+ }
+.table tbody tr td{
+    border-top:1px solid #f1f1f1;
+}
+.datatables-boxshadow{
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 20px;
+    min-height: 300px;
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
+}
+/*********************/
+
+
+.thumbnail-container {
+    position: relative;
+    width: 100%;
+}
+  
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+  
+.overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0.75;
+    color: white;
+    font-size: 20px;
+    padding: 50px 0px;
+    text-align: center;
+}
+
+.thumbnail-container:hover .overlay {
+    opacity: 1;
+}
+
+
+
+/**********************/
+
+.dark-footer{
+    background-color: #30333C;
+    ul.footer-nav{
+        padding-inline-start: 0px;
+        li{
+            color:#fff;
+            list-style-type: none;
+            padding: 8px 0px;
+            font-size: 1.25em;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+    i,a,p,div,h1,h2,h3,span{
+        color:#fff;
+    }
+    h2{
+        font-size: 2em;
+    }
+
+    .social-media-container{
+        position: relative;
+        height: 100%;
+        .social-media-box{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+
+
+/**********************/
+
+
+
+
+
+
+
+/************ Contact Form **************/
+#contact-form-container{
+    background: linear-gradient(100deg, #E6F1FF 42.5%, #fff 42.5%);
+    .title{
+        font-size: 4em;
+        color: $primaryColor;
+    }
+
+    .logo-box {
+        justify-content: center;
+      }
+      
+      .logo {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      
+      .name {
+        width: 100%;
+        font-size: 2em;
+        font-weight: bold;
+      }
+      
+      .email {
+        width: 100%;
+        font-size: 1.225em;
+      }
+      
+      .phone {
+        width: 100%;
+        font-size: 1.225em;
+      }
+      .flex-wrap {
+       display: flex;
+      }
+      .flex-wrap .content {
+          align-self: center;
+      }
+}
+/************ Contact Form **************/
+
+
+.wpcf7-response-output{
+    // display: none;
+}
+.wpcf7 form.sent .wpcf7-response-output{
+    border-width: 0px;
+}
+
+
+
+
+
+
+.gallery-title{
+    font-family: Quicksand;
+    color:#23231E;
+    font-size: 3em;
+}
+.swiper{
+    margin-top: 140px;
+}
+.swiper-slide{
+    border-top-right-radius: 120px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 380px;
+}
+.remove-margin{
+    margin-left:-1rem; 
+    margin-right:-1rem;
+}
+
+
+@media (max-width: 1400px) {
+    #datatables-container{
+        padding: 220px 0px 0px 0px;
+    }
+    
+    .gallery-title{
+        font-size: 3em;
+    }
+    .swiper-slide{
+        border-top-right-radius: 120px;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        width: 380px;
+    }
+    .swiper{
+        margin-top: 140px;
+    }
+    #contact-form-container{
+        .title{
+            font-size: 4em;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    
+    #datatables-container{
+        padding: 180px 0px 0px 0px;
+        .title{
+            font-size: 3.5em;
+        }
+    }
+
+    .gallery-title{
+        font-size: 2.75em;
+    }
+    .swiper-slide{
+        border-top-right-radius: 110px;
+        border-bottom-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+        width: 320px;
+    }
+    .swiper{
+        margin-top: 120px;
+    }
+    #contact-form-container{
+        .title{
+            font-size: 3.5em;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    #datatables-container{
+        padding: 120px 0px 0px 0px;
+    }
+
+    .gallery-title{
+        font-size: 2.5em;
+    }
+    .swiper-slide{
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        width: 320px;
+    }
+    .swiper{
+        margin-top: 100px;
+    }
+    #contact-form-container{
+        background-color: #fff;
+        background: linear-gradient(100deg, #fff 42.5%, #fff 42.5%);
+        .title{
+            font-size: 3em;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #datatables-container{
+        padding: 90px 0px 0px 0px;
+    }
+
+    .gallery-title{
+        font-size: 2.25em;
+    }
+    .swiper-slide{
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        width: 280px;
+    }
+    .swiper{
+        margin-top: 80px;
+    }
+
+    .dark-footer h2, .dark-footer .footer-nav{
+        text-align: center;
+    }
+    #contact-form-container{
+        background-color: #fff;
+        background: linear-gradient(100deg, #fff 42.5%, #fff 42.5%);
+        .title{
+            font-size: 2.5em;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    #datatables-container{
+        padding: 60px 0px 0px 0px;
+    }
+
+    .gallery-title{
+        font-size: 2em;
+        margin-left: 20px;
+        margin-top: 20px !important;
+    }
+    .swiper-slide{
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        width: 320px;
+    }
+    .swiper{
+        margin-top: 40px;
+    }
+    .remove-margin{
+        margin-left:1rem; 
+        margin-right:1rem;
+    }
+
+    .dark-footer h2, .dark-footer .footer-nav{
+        text-align: center;
+    }
+    #contact-form-container{
+        background-color: #fff;
+        background: linear-gradient(100deg, #fff 42.5%, #fff 42.5%);
+        padding-left: 20px;
+        padding-right: 20px;
+        .title{
+            font-size: 2em;
+        }
+    }
+}

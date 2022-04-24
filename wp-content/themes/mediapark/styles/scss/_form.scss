@@ -1,0 +1,108 @@
+.form-control, .wpcf7-form{
+    
+    width: 100%;
+
+    p{
+        margin:0px;
+    }
+
+    .form-input, .form-input:focus, .form-input:active{
+        width: 100%;
+        border-bottom-color: rgba(111,136,177, .27) !important;
+        border-width: 0px 0px 1px 0px !important;
+        font-size: 1.25em;
+    }
+
+    .form-input::placeholder {
+        color: $textColor;
+    }
+
+    label{
+        color: $textColor;
+        line-height: 2em;
+        font-size: 1.25em;
+    }
+    label a{
+        color: $textColor;
+    }
+
+    .styled-input-single {
+        position: relative;
+        padding: 20px 0 20px 60px;
+        text-align: left;
+    }
+    .styled-input-single label {
+        cursor: pointer;
+    }
+    .styled-input-single label:before, .styled-input-single label:after {
+        content: '';
+        position: absolute;
+        top: 40px;
+        border-radius: 50%;
+    }
+    .styled-input-single label:before {
+        left: 0;
+        width: 30px;
+        height: 30px;
+        margin: -15px 0 0;
+        background: #f7f7f7;
+        border: solid 2px $primaryColor;
+    }
+    .styled-input-single label:after {
+        left: 5px;
+        width: 22px;
+        height: 22px;
+        margin: -9px 1px;
+        opacity: 0;
+        background: $primaryColor;
+        -webkit-transform: translate3d(-40px, 0, 0) scale(0.5);
+                transform: translate3d(-40px, 0, 0) scale(0.5);
+        -webkit-transition: opacity 0s ease-in-out, -webkit-transform 0s ease-in-out;
+        transition: opacity 0s ease-in-out, -webkit-transform 0s ease-in-out;
+        transition: opacity 0s ease-in-out, transform 0s ease-in-out;
+        transition: opacity 0s ease-in-out, transform 0s ease-in-out, -webkit-transform 0s ease-in-out;
+    }
+    .styled-input-single input[type="radio"],
+    .styled-input-single input[type="checkbox"] {
+        position: absolute;
+        top: 0;
+        left: -9999px;
+        visibility: hidden;
+    }
+    .styled-input-single input[type="radio"]:checked + label:after,
+    .styled-input-single input[type="checkbox"]:checked + label:after {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+      
+    .styled-input--square label:before, .styled-input--square label:after {
+        border-radius: 0;
+    }
+      
+    .styled-input--rounded label:before {
+        border-radius: 10px;
+    }
+    .styled-input--rounded label:after {
+        border-radius: 6px;
+    }
+      
+    .styled-input--diamond .styled-input-single {
+        padding-left: 45px;
+    }
+    .styled-input--diamond label:before, .styled-input--diamond label:after {
+        border-radius: 0;
+    }
+    .styled-input--diamond label:before {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+    .styled-input--diamond input[type="radio"]:checked + label:after,
+    .styled-input--diamond input[type="checkbox"]:checked + label:after {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        opacity: 1;
+    }
+      
+      
+}
